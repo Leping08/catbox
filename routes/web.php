@@ -17,6 +17,8 @@ Route::get('/', "HomeController@index");
 
 Route::get('/posts', "PostsController@index");
 
+Route::get('/profile', "ProfileController@index")->name("profile.index");
+
 Route::post('/posts', "PostsController@store");
 
 Route::get('/posts/create', "PostsController@create");
@@ -37,3 +39,4 @@ Route::get('/meow/', function() {
 
 
 
+Auth::routes();
