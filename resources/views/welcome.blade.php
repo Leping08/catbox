@@ -35,7 +35,7 @@
     <div class="bg-gray-300 p-8">
         <div class="grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
             @foreach ($posts as $post)
-                @include('card')
+                @include('card', ['post' => $post, 'showAllContent' => false])
             @endforeach
         </div>
     </div>

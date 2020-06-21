@@ -9,7 +9,11 @@
                     {{$post->title}}
                 </h3>
                 <p class="mt-3 text-base leading-6 text-gray-500">
-                    {{\Illuminate\Support\Str::words($post->content,25)}}
+                    @if($showAllContent)
+                        {{ $post->content }}
+                    @else
+                        {{\Illuminate\Support\Str::words($post->content,25)}}
+                    @endif
                 </p>
             </a>
         </div>
